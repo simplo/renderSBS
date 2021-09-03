@@ -16,7 +16,7 @@ I needed some kind of 3D content from TouchDesigner to test a 3D projector setup
 Instead of waste time building different 3D scenarios, I tought it could be great to have a component able to be copied in any 3D TouchDesigner scenario (SOPs & Geos + camera + lights + render) and transform it in an SBS 3D output.
 
 How to use it:
-Just put renderSBS in the container with your main render: you just have to assign your existing render to the "render" parameter of the tox and get an SBS rendering as output, according to the "intereye" parameter you choose.
+Just put renderSBS in the container with your main render: you just have to assign your existing render to the "render" parameter of the tox and it will return an SBS rendering as output, according to the "intereye" parameter you choose.
 You can choose between SBS (side by side) 3D image or top/bottom.
 
 What it does:
