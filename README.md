@@ -1,7 +1,7 @@
 # renderSBS
 A fast tox to transform any 3D render in TouchDesigner in a 3D content for 3D projectors or TV (SideBySide or TopBottom)
 
-renderSBS alpha version 0.1
+renderSBS alpha version 0.1.01
 by Simone "Simplo" Murtas
 https://github.com/simplo
 
