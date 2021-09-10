@@ -1,7 +1,4 @@
-# renderSBS
-A fast tox to transform any 3D render in TouchDesigner in a 3D content for 3D projectors or TV (SideBySide or TopBottom)
-
-renderSBS alpha version 0.1.01
+renderSBS alpha version 0.2
 by Simone "Simplo" Murtas
 https://github.com/simplo
 
@@ -16,8 +13,22 @@ I needed some kind of 3D content from TouchDesigner to test a 3D projector setup
 Instead of waste time building different 3D scenarios, I tought it could be great to have a component able to be copied in any 3D TouchDesigner scenario (SOPs & Geos + camera + lights + render) and transform it in an SBS 3D output.
 
 How to use it:
-Just put renderSBS in the container with your main render: you just have to assign your existing render to the "render" parameter of the tox and it will return an SBS rendering as output, according to the "intereye" parameter you choose.
-You can choose between SBS (side by side) 3D image or top/bottom.
+Just put renderSBS in the container with your main render: you just have to assign your existing render to the "render" parameter of the tox and get an SBS rendering as output, according to the "intereye" parameter you choose.
+Parameters:
+	- render -> the render object to process
+	- type -> what kind of 3D mode you want
+		TopBottom
+		SideBySide
+	- interEye -> distance between the two cameras. Increasing it will improve 3D effect, but too much will distorce image.	
+	- POVmode -> how to set the POV (theorically the tz=0 means that SOPs beyond that value appears as "inside" the projection surface, the ones before that value appersa as "outside")
+		at zero -> fixed at tz=0
+		follow -> same as original (if present in the render, otherwise is set to 0), even if it's moving
+		relative to camera -> always at a specific distance from camera
+	- POVplane
+		distance from camera for "relative to camera" mode
+
+
+
 
 What it does:
 Basically it takes the original point of view of the camera in your original render as LEFT EYE camera, then creates a RIGHT EYE camera at "intereye" distance from that and take both tangent to the point of view.
