@@ -20,10 +20,10 @@ Parameters:
 		TopBottom
 		SideBySide
 	- interEye -> distance between the two cameras. Increasing it will improve 3D effect, but too much will distorce image.	
-	- POVmode -> how to set the POV (theorically the tz=0 means that SOPs beyond that value appears as "inside" the projection surface, the ones before that value appersa as "outside")
+	- POVmode -> how to set the POV (theorically the tz=0 means that SOPs beyond that value appears as "inside" the projection surface, the ones before that value appears as "outside")
 		at zero -> fixed at tz=0
 		follow -> same as original (if present in the render, otherwise is set to 0), even if it's moving
-		relative to camera -> always at a specific distance from camera
+		relative to camera -> always at a specific distance from camera even if it's movining, and keeping same orientation of the original POV (if any)
 	- POVplane
 		distance from camera for "relative to camera" mode
 
